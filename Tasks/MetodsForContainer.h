@@ -36,11 +36,6 @@ void MetodsForContainer<T>::FillingTheContainerWithRandomNumbers(std::vector<T>&
 		vec.push_back(rand() % 11);
 		
 	}
-
-	for (auto iter = vec.begin(); iter != vec.end(); ++iter)
-	{
-		std::cout << *iter << std::endl;
-	}
 }
 
 template<typename T>
@@ -49,10 +44,6 @@ inline void MetodsForContainer<T>::SquaringContainerElements(std::vector<T>& vec
 	for (auto iter = vec.begin(); iter != vec.end(); ++iter)
 	{
 		*iter *= (*iter);
-	}
-	for (auto iter = vec.begin(); iter != vec.end(); ++iter)
-	{
-		std::cout << *iter << std::endl;
 	}
 }
 
@@ -63,10 +54,6 @@ void MetodsForContainer<T>::RemoveOdd(std::vector<T>& vec)
 	vec.erase(std::remove_if(vec.begin(), vec.end(),
 		[](int item) { return item % 2 != 0; }), vec.end());
 
-	for (auto iter = vec.begin(); iter != vec.end(); ++iter)
-	{
-		std::cout << *iter << std::endl;
-	}
 }
 
 template<typename T>
@@ -76,9 +63,6 @@ void MetodsForContainer<T>::TheSumOfAllTheElementsOfTheContainer(std::vector<T>&
 
 	for (auto iter = vec.begin(); iter != vec.end(); ++iter)
 		sum += (*iter);
-
-	std::cout << sum << std::endl;
-		
 }
 
 template<typename T>
